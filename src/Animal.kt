@@ -1,15 +1,18 @@
-public class Animal(val type: String, val cri: String){
+open class Animal(val nom: String, val cri: String) {
+
+
     fun crier() {
-        return println("L'animal crie")
+        println("$nom fait $cri");
     }
 }
-public class Dog(){
 
-}
+class Chien(nom: String) : Animal(nom, "waf waf");
+class Chat(nom: String) : Animal(nom, "Miaou");
 
 fun main() {
+    val dog = Chien("Bernard");
+    dog.crier();
 
+    val cat = Chat("Grizzi");
+    cat.crier()
 }
-
-//https://outcomeschool.com/blog/open-keyword-in-kotlin
-//https://developer.android.com/codelabs/basic-android-kotlin-training-classes-and-inheritance?hl=fr#2
