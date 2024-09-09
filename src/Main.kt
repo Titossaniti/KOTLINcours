@@ -16,9 +16,7 @@ fun cartList(): MutableMap<String, Int> {
         println("Le caddie de course est vide")
     } else {
         println("Voici le contenu du caddie :")
-        for ((item, quantity) in cartList) {
-            println("$item : $quantity")
-        }
+        println(cartList)
     }
     return cartList
 }
@@ -28,9 +26,7 @@ fun listCourse(): MutableMap<String, Int> {
         println("La liste de course est vide")
     } else {
         println("Voici la liste de courses :")
-        for ((item, quantity) in courseList) {
-            println("$item : $quantity")
-        }
+        println(courseList)
     }
     return courseList
 }
